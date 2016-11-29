@@ -1,0 +1,22 @@
+.margenNav{
+	margin-bottom: 10px;
+}
+
+.infoB{
+	margin-bottom: 15px;
+}
+
+.verticalLine {
+    border-top: thick solid #AAAAAA;
+    margin: 5px 0 15px 0;
+    padding-top: 8px;
+}
+
+.titulo{
+	margin-left: 10px;
+}
+
+.espacio{
+
+	margin-bottom: 150px;	
+}
