@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="stylesheet" href="estilo/estilo.css">
+    <meta charset="utf-8">
+    <title>Muestre de Agua</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+
+  </head>
+  <body onload="">
+  
+  <nav class="navbar navbar-dark bg-inverse margenNav">
+    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+      <a class="navbar-brand" href="../"><h3>Monitoreo</h3></a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../paginaInsercion/">Inserción</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Búsqueda <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Actualización</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Borrado</a>
+        </li>
+      </ul>
+    </nav>
+
+
+  <div class="main">
+    <div class="anidar"><h3>Calidad del agua:</h3> 
+      	<button class="nivel" id="calidad1" style="background: #3B0AF2"></button>
+      	<button class="nivel" id="calidad2" style="background: #02CDEB"></button>
+      	<button class="nivel" id="calidad3" style="background: #FCF306"></button>
+      	<button class="nivel" id= "calidad4"  style="background: #F6700D"></button>
+      	<button class="nivel" id="calidad5" style="background: #F31616"></button>
+		<button class="reset" id="reset">reset</button>
+      	<h3>Radio:</h3>
+      	<input type="number" min="1" id="inputFilterRadio" class="inputFilter">
+      	<button class="botonFiltro" onclick="aplicarFiltro(document.getElementById('inputFilterRadio').value,1)">filtrar</button>
+    </div>
+	<header>		
+		<nav class="buscador">
+			<ul class="mainUl">
+				<h2 class="title">Seleccione filtros</h2>
+				<ul class="childUl">			
+					<li><h3>Fecha</h3> <br>Entre:<input type="date"> Y <input type="date"></li>
+					<li><h3>Institución</h3><br>      
+						<select style="width: 50%">
+						  <option value="">Seleccione</option>
+						  <option value="volvo">Ciudad Colon</option>
+						  <option value="saab">Curridabat</option>
+						  <option value="opel">Moravia</option>
+						  <option value="audi">San Pedro</option>
+						</select>
+					</li>
+					<button class="btnFiltrar">Fitrar</button>
+				</ul>
+			</ul> 
+		</nav>
+	</header>
+    <div id="map">    
+    </div>
+  </div>
+
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!--<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>-->
+    <script type="text/javascript" src="js/mapa.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASD_G4QESSwasWDNBp2Qz4GqT0YoiUTrM&signed_in=true&callback=initMap"></script>
+  
+
+  </body>
+</html>
